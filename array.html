@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var elementos = new Array("Juan", "Pablo", "Nanez", 15, 20, "Pato", "Tillard", "Emma", 2); //defino array elementos. 
+        var no_nume = new Array(); //defino array dato no numerico.
+        var suma = 0; //defino variable para sumar elemento numerico.
+
+        for (i = 0; i < elementos.length; i++) //defino funcion bucle para i que comience en 0, que vaya hasta el ultimo elemento del array e incremento i +1 para cada bucle. 
+        {
+            if (typeof (elementos[i]) === "number") //funcion para identificar el tipo valor numerico de un elemento del array.
+            {
+                console.log("El Elemento actual es:" + elementos[i]); //muestra en consola el elemento actual del array.
+                suma = suma + elementos[i]; //suma el elemento numericos del array.
+                console.log("La suma actual es: " + suma); //muestra en consola la sumatoria de los elementos numericos del array.
+            } else if (typeof (elementos[i]) === "string") //funcion para identificar los elementos no numericos del array.
+            { 
+                console.log("El elemento actual es" + elementos[i]); //muestra en consolar el elemento actual del array.
+                no_nume.push(elementos[i]); //carga al array no_nume los elementos no numericos.
+                console.log("Se carga en no_nume" + no_nume); //muestra en consola todos los elementos del array no_nume.
+            }
+        }
+    </script>
+</body>
+</html>

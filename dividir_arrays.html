@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numeros = [];  //denifinir el array numerico.
+        var no_numero = []; //definir array no numerico.
+        var pares = []; // definir array de numeros pares.
+        var impares = []; // definir array de numeros impares.
+        var pare = 0;  //definir palabra de detencion de carga.
+        var input = -1;  //definir variale para almacenar el prompt.
+        
+        while(input != pare)  //carga de array usando while con detencion con string STOP.
+        {
+            input= (prompt ("Ingrese Datos [0 para finalizar Carga]"));  //pedir input de usuario en variable input. 
+            console.log(input);
+            if(isNaN(input)) //funcion que valida si es el numero entero
+            {
+                no_numero.push(input);
+                console.log("Array no numerico" + no_numero);
+            } 
+            else if (input!=0)
+            {
+                numeros.push(input); //se carga en array numeros el valor numerico de input.
+                console.log(" Array Numerico" + numeros); //se muestra en consola el array numeros.
+            }
+        } 
+        for(i=0;i<numeros.length;i++) //busca recorriendo el array numeros.
+            {
+                
+                if((numeros[i]%2)==0) //separo numero pares de impares dividiendo por 2.
+                {
+                    pares.push(numeros[i]); //carga array numeros pares.
+                }
+                else
+                {
+                    impares.push(numeros[i]); //carga array numeros impares.
+                }
+            }
+        alert(pares.toString("Muestra Pares"));//muestra el array convirtiendo elementos a un string. 
+        alert(impares.toString("Muestra Impares"))
+        alert(no_numero.toString("Muestra Texto"))
+
+        numeros.sort(); //ordena array.
+        alert("Array numerico ordenado" + numeros.toString()); //muestra array ordenado.
+        var menor = numeros.shift(); //elimina numero menor en array.
+        var mayor = numeros.pop(); //elimina numero mayor en array.
+        alert("El Menor elemento es( :"+ menor); //muestra que numero se elimino
+        alert("El Mayot elemento es :"+ mayor); //muestra que numero se elimino
+        alert("Array numerico final:" +numeros.toString()); //uestra todo el array sin numeros extremos.
+
+    </script>
+</body>
+
+</html>

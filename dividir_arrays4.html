@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var caracter = new Array(); //array principal.
+        var car1 = new Array(); //primer division del sub-array.
+        var car2 = new Array(); //segunda division del sub-array.
+        var car3 = new Array(); //tercera division del sub-array.
+        
+        var pare = 0; // input de parada
+        var input =-1; 
+
+        while(input!=pare) //mientras la condicion no sea 0(pare), no para la carga de caracteres.
+        {
+            (input=prompt("Ingrese Caracter:")); //prompt para igreso de caracteres.
+            if(input!=pare) //si la condicion no es igual a 0(pare).
+            {
+                caracter.push(input);//cargar elementos en array caracter
+            }
+        }
+        console.log(caracter); //muestra el array principal.
+        var n_car = caracter.length/3; //obtengo cantidad de elementos a div del array
+        console.log(n_car); //muestra n elementos en arrays-
+        console.log((caracter.length%3));//consultar con pato / y %
+        if((caracter.length%3)==1) //condicion sobrante de 1 en array.
+        {
+            caracter.shift(); //si es igual a 1 el que sobra lo elimina de la lista del array
+        }
+        else if((caracter.length%3)==2) //condicion sobrante de 2 en array.
+        {
+            caracter.shift(); //si es igual a 2 el que sobra lo elimina de la lista del array.
+            caracter.pop(); //si es igual a 2 el que sobra lo elimina de la lista del array.
+        }
+        console.log(caracter); //muestra array.
+        car1 = caracter.slice(0,n_car); //primer sub array.
+        console.log(car1); //muestra sub array.
+        car2 = caracter.slice(n_car,n_car*2); //segundo sub array.
+        console.log(car2); //muestra sub array.
+        car3 = caracter.slice(n_car*2,n_car*3); //tercer sub array.
+        console.log(car3); //muestra sub array.
+    </script>
+</body>
+</html>

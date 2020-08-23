@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var destinatario = "Juan"
+        var fondos = 100
+        var usuario = prompt("Ingrese nombre del cliente")
+        var monto = parseInt(prompt("Ingrese Monto a Transferir"))
+        if (usuario == destinatario && monto <= fondos) {
+            alert("Transacción Exitosa");
+            fondos = fondos - monto;
+            console.log(fondos);
+        } else {
+            alert("Transacción Incorrecta");
+        }
+    </script>
+</body>
+
+</html>

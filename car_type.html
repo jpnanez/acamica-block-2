@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var modelo;
+        var autonomia;
+        var kms;
+        const litros = 50;
+        alert("Los modelos disponibles son: \n1- Motor 1.6 \n2- Motor 1.8 \n3- Motor 2.0 1");
+        var modelo = parseInt(prompt("Indique su motor [1-3]: "));
+        console.log(modelo);
+        if(modelo==1)
+            autonomia = 15*litros;
+        else if(modelo==2)
+            autonomia = 12*litros;
+        else if(modelo==3)
+            autonomia = 10*litros;
+        console.log(autonomia);
+        var kms = parseInt(prompt("Indique cantidad de Kms: "));
+        console.log(kms);
+        var tanques = kms/autonomia;
+        console.log(tanques);
+        alert("Cantidad de Tanques necesario: "+tanques);
+    </script>
+</body>
+</html>

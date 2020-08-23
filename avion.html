@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a319 = {
+            peso: 75000,
+            asientos: 142
+        };
+        console.log(a319.peso) //imprime 75000
+        let a340 = {
+            peso: 380000,
+            asientos: 359,
+            msj: function () {
+                return "Bienvenido a Airbus" //define componentes objeto con mensaje de bienvenida.
+            }
+        }; 
+        console.log(a340.msj()); // imprime “Bienvenido a Airbus 380”
+
+        class Aviones 
+        {
+            saludo() {return "Hola a Todos " + this.nombre;}
+        }
+        a319 = new Aviones
+        a319.nombre = "A319";
+        console.log(a319.saludo()) //Imprime "Hola a Todos"
+        a340 = new Aviones
+        a340.nombre = "A340";
+        console.log(a340.saludo()) //Imprime "Hola a Todos"
+        console.log(Aviones)
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name, lastname, age){
+                this.name = name;
+                this.lastname = lastname;
+                this.age = age; 
+            }
+            fullname(){
+                return this.name +" " + this.lastname;
+            }
+            is_legal_age(){
+                /*var res = "";
+                if (this.age <= 18{ res = true;} else{ res = false}}
+                return res;*/
+                
+                return (this.age >= 18) ? true : false ; //constructor en dos datos true o false. 
+            }
+        } 
+       
+        let new_name =prompt("Ingrese un nombre"); //prompt ingreso de datos.
+        let new_lastname = prompt("Ingrese un apellido"); //prompt ingreso de datos.
+        let new_age = prompt("Ingrese una Edad"); //prompt ingreso de datos.
+       
+        var personal = new Person(new_name,new_lastname,new_age); //instancia personal en clase Person.
+       
+        console.log(personal);// devuelve var peronal
+        console.log(personal.fullname()); // devuelve nombre+apellido
+        console.log(personal.is_legal_age()=== true ? "Mayor de Edad":"Menor de Edad"); //valida edad entre dos datos
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    var numero = prompt("Introduce un dial de frecuencia");
+
+    var resultado = parImpar(numero);
+    alert("El número " + numero + " es " + resultado);
+
+    function parImpar(numero) {
+      if (numero % 2 == 0) {
+        return "par, por favor vuelve a introducir un impar";
+      } else if (numero < 89.9) {
+        alert("ingrese un dial mayor a 89.9")
+      } else if (numero > 107.9) {
+        alert("ingrese un dial menor a 107.9")
+      } else {
+        alert("Su Dial ha sido Validado")
+      }
+    }
+    //var dial = parseFloat(prompt("Ingrese el radial completo: "));
+    // console.log(dial);
+    // if(dial%2==0)
+    // {
+    //    alert("El radial NO es impar");
+    // }
+    // else if ((dial<89.9)||(dial>=107.9))
+    //{
+    //     alert("El radial está fuera de rango");
+    // }
+    // else alert("El radial ingresado es: "+dial);
+  </script>
+</body>
+
+</html>

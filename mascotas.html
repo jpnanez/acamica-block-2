@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Perros //nueva clase perros.
+        {
+            constructor(size,gender,breed,age,health,status) //crear propiedades del objeto.
+            {
+                this.size = size; 
+                this.gender = gender;
+                this.breed = breed;
+                this.age = age;
+                this.health = health;
+                this.status = status
+            }
+        
+            set changeStatus(new_status)
+            {
+                this.status = new_status;
+            }
+            viewstatus()
+            {
+                return this.status; //devuelve valor nuevo status
+            }
+        }
+        perro1= new Perros("small","female","dogo",5, "saludable","En Transito");
+        console.log(perro1)
+        perro1.changeStatus = "adoptado"; //ingresa nuevo status.
+        //console.log(perro1);
+        console.log(perro1.viewstatus()); //imprime nuevo status.  
+    </script>
+</body>
+</html>

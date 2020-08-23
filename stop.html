@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numeros = [];  //definir el array.
+        var pare = "stop";  //definir palabra de detencion de carga.
+        var input = "";  //definir variale para almacenar el prompt.
+        
+        while(input != pare)  //carga de array usando while con detencion con string STOP.
+        {
+            input= (prompt ("Ingrese Datos [Stop para finalizar Carga"));  //pedir input de usuario en variable input. 
+            console.log(input);
+            if(isNaN(input)) //funcion que valida si es el numero entero
+            {
+                if(input===pare) //funcion 
+                {
+                    alert("Carga Terminada");//alerta por finalizacion de la carga por palabra stop. 
+                }
+                else
+                {
+                    alert("No es un Numero")//alerta por ingreso de un valor no numerico.
+                }
+            }
+            else
+            {
+                numeros.push(input); //se carga en array numeros el valor numerico de input.
+                console.log(numeros); //se muestra en consola el array numeros.
+            }
+        }  
+        alert(numeros.toString());//muestra el array convirtiendo elementos a un string. 
+    </script>
+</body>
+
+</html>
